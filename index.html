@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zuzana Vasičáková-Očenášová — Psychoterapia</title>
+<title>Zuzana Vasičáková Očenášová — Psychoterapia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -44,12 +44,13 @@
   }
 
   .site-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-size: 1.25rem;
     letter-spacing: 0.04em;
     color: var(--charcoal);
     text-decoration: none;
+    text-transform: uppercase;
   }
 
   .header-right {
@@ -142,7 +143,7 @@
   }
 
   .hero-tagline {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 300;
     font-style: italic;
     font-size: 2.6rem;
@@ -153,19 +154,31 @@
 
   .hero-beliefs {
     list-style: none;
-    border-top: 1px solid var(--border);
     padding-top: 2rem;
   }
 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
   .hero-beliefs li {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-size: 1.1rem;
     color: var(--muted);
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.4rem 0;
     letter-spacing: 0.01em;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
   }
+
+  .hero-beliefs li:nth-child(1) { animation-delay: 0.2s; }
+  .hero-beliefs li:nth-child(2) { animation-delay: 1.2s; }
+  .hero-beliefs li:nth-child(3) { animation-delay: 2.2s; }
+  .hero-beliefs li:nth-child(4) { animation-delay: 3.2s; }
+  .hero-beliefs li:nth-child(5) { animation-delay: 4.2s; }
+  .hero-beliefs li:nth-child(6) { animation-delay: 5.2s; }
 
   /* ── TABS / CONTENT ── */
   main {
@@ -179,7 +192,7 @@
 
   /* ── OFFER ── */
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-size: 2.2rem;
     color: var(--charcoal);
@@ -196,8 +209,7 @@
     display: flex;
     align-items: baseline;
     gap: 1.2rem;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 0;
     font-size: 1.05rem;
     color: var(--charcoal);
   }
@@ -206,7 +218,7 @@
     content: "—";
     color: var(--stone);
     flex-shrink: 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
   }
 
   /* ── ABOUT ── */
@@ -218,7 +230,7 @@
   }
 
   .cred-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 0.05em;
@@ -235,12 +247,11 @@
     font-size: 0.95rem;
     color: var(--charcoal);
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border);
     line-height: 1.5;
   }
 
   .about-location {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-style: italic;
     font-size: 1.15rem;
     color: var(--muted);
@@ -257,7 +268,7 @@
   }
 
   .empty-state p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-style: italic;
     font-size: 1.4rem;
   }
@@ -288,7 +299,7 @@
   }
 
   .contact-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 1.3rem;
     color: var(--charcoal);
   }
@@ -335,14 +346,14 @@
 <body>
 
 <header>
-  <a class="site-name" href="#" onclick="showTab('ponuka'); return false;" id="lang-sk" style="display:none">Zuzana Vasičáková-Očenášová</a>
-  <a class="site-name" href="#" onclick="showTab('offer'); return false;" id="lang-en" style="display:none">Zuzana Vasičáková-Očenášová</a>
+  <a class="site-name" href="#" onclick="showTab('ponuka'); return false;" id="lang-sk" style="display:none">Zuzana Vasičáková Očenášová</a>
+  <a class="site-name" href="#" onclick="showTab('offer'); return false;" id="lang-en" style="display:none">Zuzana Vasičáková Očenášová</a>
 
   <div class="header-right">
     <nav id="nav-sk" style="display:none">
       <a onclick="showTab('ponuka')" data-tab="ponuka">Ponuka</a>
       <a onclick="showTab('omne')" data-tab="omne">O mne</a>
-      <a onclick="showTab('podujatia')" data-tab="podujatia">Podujatia</a>
+      <a onclick="showTab('udalosti')" data-tab="udalosti">Udalosti</a>
       <a onclick="showTab('kontakt')" data-tab="kontakt">Kontakt</a>
     </nav>
     <nav id="nav-en" style="display:none">
@@ -363,7 +374,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-photo">
-    <img src="zuza3.gif" alt="Zuzana Vasičáková-Očenášová">
+    <img src="vlna.jpg" alt="Zuzana Vasičáková Očenášová">
   </div>
   <div class="hero-text">
     <div id="hero-sk" style="display:none">
@@ -371,7 +382,7 @@
       <ul class="hero-beliefs">
         <li>Ťažké časy a konflikty môžu byť príležitosťami.</li>
         <li>Láskavosť sa oplatí.</li>
-        <li>Aj tancovať sa oplatí.</li>
+        <li>Tancovať sa oplatí.</li>
         <li>Prístup k vlastnej sile robí vzťahy zdravšími.</li>
         <li>Zodpovednosť je lepšia ako vina.</li>
         <li>Telo je učiteľ.</li>
@@ -381,8 +392,8 @@
       <p class="hero-tagline">I accompany individuals and groups.</p>
       <ul class="hero-beliefs">
         <li>Difficult times and conflicts can be opportunities.</li>
-        <li>Kindness is worthwhile.</li>
-        <li>So is dancing.</li>
+        <li>Kindness is worth it.</li>
+        <li>Dancing is worth it.</li>
         <li>Access to one's own strength makes relationships healthier.</li>
         <li>Responsibility is better than blame.</li>
         <li>The body is a teacher.</li>
@@ -401,6 +412,7 @@
       <li>Sprevádzanie jednotlivcov, párov aj skupín; psychoterapeuticky informované poradenstvo</li>
       <li>Procesorientovaná psychológia</li>
       <li>Práca s telom a pohybom v tanečno-pohybovej terapii</li>
+      <li>Labanova analýza pohybu</li>
       <li>EMDR</li>
       <li>Facilitácia skupín</li>
       <li>Tréningy a workshopy pre firmy</li>
@@ -417,6 +429,7 @@
       <li>Accompaniment of individuals, couples and groups; psychotherapeutically informed counselling</li>
       <li>Process-oriented psychology</li>
       <li>Body and movement work in dance movement therapy</li>
+      <li>Laban Movement Analysis</li>
       <li>EMDR</li>
       <li>Group facilitation</li>
       <li>Trainings and workshops for companies</li>
@@ -454,6 +467,7 @@
         </ul>
       </div>
     </div>
+    <img src="zuza3.gif" alt="Zuzana Vasičáková Očenášová" style="width: 220px; height: 220px; object-fit: cover; object-position: center top; border-radius: 50%; display: block; margin: 2.5rem auto 0;">
     <p class="about-location">Sprevádzam jednotlivcov a skupiny. Ťažké časy a konflikty môžu byť príležitosťami.</p>
   </div>
 
@@ -485,14 +499,15 @@
         </ul>
       </div>
     </div>
+    <img src="zuza3.gif" alt="Zuzana Vasičáková Očenášová" style="width: 220px; height: 220px; object-fit: cover; object-position: center top; border-radius: 50%; display: block; margin: 2.5rem auto 0;">
     <p class="about-location">I accompany individuals and groups. Difficult times and conflicts can be opportunities.</p>
   </div>
 
-  <!-- SK: Podujatia -->
-  <div class="tab-panel" id="tab-podujatia">
-    <h2 class="section-title">Podujatia</h2>
+  <!-- SK: Udalosti -->
+  <div class="tab-panel" id="tab-udalosti">
+    <h2 class="section-title">Udalosti</h2>
     <div class="empty-state">
-      <p>Momentálne nie sú naplánované žiadne podujatia.</p>
+      <p>Momentálne nie sú naplánované žiadne udalosti.</p>
     </div>
   </div>
 
@@ -537,7 +552,7 @@
 </main>
 
 <footer>
-  &copy; <span id="year"></span> Zuzana Vasičáková-Očenášová
+  &copy; <span id="year"></span> Zuzana Vasičáková Očenášová
 </footer>
 
 <script>
